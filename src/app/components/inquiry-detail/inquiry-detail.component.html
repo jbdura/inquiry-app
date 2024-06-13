@@ -1,0 +1,24 @@
+<div>
+    <h1>Edit Inquiry</h1>
+    <form (submit)="updateInquiry()">
+        <label>Name: <input [(ngModel)]="inquiry.name" name="name"></label>
+        <label>Email: <input [(ngModel)]="inquiry.email" name="email"></label>
+        <label>Message: <textarea [(ngModel)]="inquiry.message" name="message"></textarea></label>
+        <button type="submit">Update</button>
+    </form>
+    <button (click)="deleteInquiry()">Delete</button>
+</div>
+
+
+<!-- <div>
+    <h1>Edit Inquiry</h1>
+    <form (submit)="updateInquiry()">
+        <label>Name: <input [(ngModel)]="inquiry.name" name="name"></label>
+        <label>Email: <input [(ngModel)]="inquiry.email" name="email"></label>
+        <label>Message: <textarea [(ngModel)]="inquiry.message" name="message"></textarea></label>
+        <button type="submit">Update</button>
+    </form>
+    <button (click)="deleteInquiry()">Delete</button>
+</div>
+
+<p>inquiry-detail works!</p> -->

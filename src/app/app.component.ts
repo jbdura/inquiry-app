@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { HomeComponent } from './components/home/home.component';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: [ './app.component.css' ],
+  standalone: true,
+  imports: [ RouterModule, HomeComponent ]
 })
 export class AppComponent {
   title = 'inquiry-app';
 }
+

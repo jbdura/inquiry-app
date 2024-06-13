@@ -1,0 +1,38 @@
+<div>
+    <h1>Inquiries</h1>
+    <ul>
+        <li *ngFor="let inquiry of inquiries" (click)="viewInquiry(inquiry.id)">
+            <h2>{{ inquiry.name }}</h2>
+            <p>{{ inquiry.email }}</p>
+            <p>{{ inquiry.message }}</p>
+        </li>
+    </ul>
+
+    <h2>Create New Inquiry</h2>
+    <form (submit)="createInquiry()">
+        <label>Name: <input [(ngModel)]="newInquiry.name" name="name"></label>
+        <label>Email: <input [(ngModel)]="newInquiry.email" name="email"></label>
+        <label>Message: <textarea [(ngModel)]="newInquiry.message" name="message"></textarea></label>
+        <button type="submit">Create</button>
+    </form>
+</div>
+
+
+<!-- <div>
+    <h1>Inquiries</h1>
+    <ul>
+        <li *ngFor="let inquiry of inquiries" (click)="viewInquiry(inquiry.id)">
+            <h2>{{ inquiry.name }}</h2>
+            <p>{{ inquiry.email }}</p>
+            <p>{{ inquiry.message }}</p>
+        </li>
+    </ul>
+
+    <h2>Create New Inquiry</h2>
+    <form (submit)="createInquiry()">
+        <label>Name: <input [(ngModel)]="newInquiry.name" name="name"></label>
+        <label>Email: <input [(ngModel)]="newInquiry.email" name="email"></label>
+        <label>Message: <textarea [(ngModel)]="newInquiry.message" name="message"></textarea></label>
+        <button type="submit">Create</button>
+    </form>
+</div> -->
